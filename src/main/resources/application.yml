@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+
+swagger:
+  info:
+    title: Partner API
+    version: 0.0.1
+    description: API for interaction with partners

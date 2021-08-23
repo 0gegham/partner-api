@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  partner:
+    build: .
+    image: partner-image
+    container_name: partner
+    ports:
+      - 8080:8080
