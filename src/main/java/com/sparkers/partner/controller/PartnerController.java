@@ -47,7 +47,7 @@ public class PartnerController {
     @ResponseStatus(value = HttpStatus.OK)
     @Operation(summary = "Modify partner by id")
     public PartnerDto modify(@PathVariable(value = "id") Long id,
-                             @RequestBody PartnerDto partnerDto) {
+                             @Valid @RequestBody PartnerDto partnerDto) {
         final Partner partner = partnerMapper.dtoToEntity(partnerDto);
         return partnerMapper.entityToDto(partnerService.modify(id, partner));
     }
